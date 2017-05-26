@@ -13,6 +13,11 @@ WARNING
 This is the documentation for `master`. If you are installing Hipache from **NPM**,
 you should look at the documentation on the [`0.3.x` branch](https://github.com/hipache/hipache/tree/0.3.1).
 
+Disclaimer
+----------
+This is a fork of the original Hipache project (https://github.com/hipache/hipache). When you use Hipache inside a docker container,
+this branch add a "dockerhost" entry in the /etc/hosts file of your container. That allows you to have your Hipache container
+listening (for instance) on the port 80 of your host and redirecting to other ports either on docker containers or on your host machine.
 
 What Is It?
 -----------
