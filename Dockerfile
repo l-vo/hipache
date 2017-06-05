@@ -18,7 +18,12 @@ from    ubuntu:14.04
 run apt-get -y update
 
 # Install node and npm
-run apt-get -y install nodejs npm
+run apt-get update && apt-get -y install curl nodejs npm
+
+# Upgrade nodejs for ECDHE support
+run npm install -g n
+run n v0.12.18
+run ln -sf /usr/local/n/versions/node/0.12.18/bin/node /usr/bin/nodejs
 
 # Manually add Hipache folder
 run mkdir ./hipache
